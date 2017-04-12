@@ -1,0 +1,17 @@
+{
+    "name": "entere/cashier",
+    "authors": [
+        {
+            "name": "entere",
+            "email": "entere@126.com"
+        }
+    ],
+    "require": {
+         "php":">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Entere\\": "src/"
+        }
+    }
+}
