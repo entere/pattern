@@ -116,6 +116,8 @@ $obj->submit("打8折",2,39);
 大约1个小时后，小菜交出了第三份作业。
 
 代码结构图
+
+![代码结构图](http://hi.csdn.net/attachment/201006/19/0_1276989870q5S1.gif)
  
 ICashSuper.php
 
@@ -321,6 +323,8 @@ class Client
 
 策略模式（Strategy）结构图
 
+![策略模式（Strategy）结构图](http://hi.csdn.net/attachment/201006/19/0_12769899720BOF.gif)
+
 ```php
 
 <?php
@@ -397,6 +401,8 @@ class Main
 商场收银系统v1.2
 
 代码结构图
+
+![代码结构图](http://hi.csdn.net/attachment/201006/19/0_1276990048DO8H.gif)
 
 ```php
 
@@ -687,6 +693,7 @@ $totalPrices = $cashContext->acceptCash($num * $price);
 “反射真的有这么神奇？”小菜疑惑地望向了远方。
 
 （注：在抽象工厂模式章节有对反射的讲解）
+
 
 # 源码
 
