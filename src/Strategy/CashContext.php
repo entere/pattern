@@ -1,9 +1,9 @@
 <?php
-namespace Entere\Cashier;
+namespace Entere\Pattern\Strategy;
 
-use Entere\Cashier\CashNormal;
-use Entere\Cashier\CashRebate;
-use Entere\Cashier\CashReturn;
+use Entere\Pattern\Strategy\CashNormal;
+use Entere\Pattern\Strategy\CashRebate;
+use Entere\Pattern\Strategy\CashReturn;
 
 //工厂与策略结合
 class CashContext {
@@ -29,17 +29,17 @@ class CashContext {
         $cs = null;
         switch ($type) {
             // 正常策略  
-            case 'normal':
+            case '正常收费':
                 $cs = new CashNormal();
                 break;
 
             // 打折策略  
-            case 'rebate8':
+            case '打8折':
                 $cs = new CashRebate(0.8);
                 break;
 
             // 返利策略  
-            case 'return300to100':
+            case '满300返100':
                 $cs = new CashReturn(300, 100);
                 break;
             

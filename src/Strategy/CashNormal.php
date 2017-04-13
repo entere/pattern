@@ -1,8 +1,7 @@
 <?php
+namespace Entere\Pattern\Strategy;
 
-namespace Entere\Cashier;
-
-use Entere\Cashier\ICashSuper;
+use Entere\Pattern\Strategy\ICashSuper;
 
 // 正常收钱策略  
 class CashNormal implements ICashSuper {

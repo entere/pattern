@@ -1,8 +1,7 @@
 <?php
+namespace Entere\Pattern\Strategy;
 
-namespace Entere\Cashier;
-
-use Entere\Cashier\ICashSuper;
+use Entere\Pattern\Strategy\ICashSuper;
 
 // 折扣收取策略  
 class CashRebate implements ICashSuper {

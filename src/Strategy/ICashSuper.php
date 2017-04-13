@@ -1,6 +1,5 @@
 <?php
-
-namespace Entere\Cashier;
+namespace Entere\Pattern\Strategy;
 
 interface ICashSuper {
 

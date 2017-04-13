@@ -1,5 +1,5 @@
 {
-    "name": "entere/cashier",
+    "name": "entere/pattern",
     "authors": [
         {
             "name": "entere",
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Entere\\": "src/"
+            "Entere\\Pattern\\Strategy\\": "src/Strategy"
         }
     }
 }

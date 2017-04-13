@@ -1,15 +1,14 @@
 <?php
-namespace Entere\Cashier;
 
-require_once("./src/ICashSuper.php");
-require_once("./src/CashNormal.php");
-require_once("./src/CashRebate.php");
-require_once("./src/CashReturn.php");
-require_once("./src/CashContext.php");
+require_once("../src/Strategy/ICashSuper.php");
+require_once("../src/Strategy/CashNormal.php");
+require_once("../src/Strategy/CashRebate.php");
+require_once("../src/Strategy/CashReturn.php");
+require_once("../src/Strategy/CashContext.php");
 
-use Entere\Cashier\CashContext;
+use Entere\Pattern\Strategy\CashContext;
 
-class Client {
+class ClientStrategy {
     public function main() {
 
         $total = 0;   
@@ -20,8 +19,8 @@ class Client {
         // 单价  
         $priceA = 100;  
         // 策略模式获取结果  
-        $totalA = $cashContext->getResultAll('normal', $numA, $priceA);  
-        $this->display('A', 'normal', $numA, $priceA, $totalA);  
+        $totalA = $cashContext->getResultAll('正常收费', $numA, $priceA);  
+        $this->display('A', '正常收费', $numA, $priceA, $totalA);  
         
 
 
@@ -30,8 +29,8 @@ class Client {
         // 单价  
         $priceB = 100;  
         // 打折策略获取结果  
-        $totalB = $cashContext->getResultAll('rebate8', $numB, $priceB);  
-        $this->display('B', 'rebate8', $numB, $priceB, $totalB);  
+        $totalB = $cashContext->getResultAll('打8折', $numB, $priceB);  
+        $this->display('B', '打8折', $numB, $priceB, $totalB);  
           
 
 
@@ -40,8 +39,8 @@ class Client {
         // 单价  
         $priceC = 400;  
         // 返利策略获取结果  
-        $totalC = $cashContext->getResultAll('return300to100', $numC, $priceC);  
-        $this->display('C', 'return300to100', $numC, $priceC, $totalC);  
+        $totalC = $cashContext->getResultAll('满300返100', $numC, $priceC);  
+        $this->display('C', '满300返100', $numC, $priceC, $totalC);  
     }
 
     /** 
@@ -64,8 +63,8 @@ class Client {
  * 程序入口 
  */  
 function start(){  
-    $client = new Client();  
-    $client->main();  
+    $clientStrategy = new ClientStrategy();  
+    $clientStrategy->main();  
 }  
   
 start();  
